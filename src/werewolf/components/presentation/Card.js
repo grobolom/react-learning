@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
-export default ({ image, text }) => (
-  <div className="tile">
-    <img src={image} />
-    <p>{text}</p>
-  </div>
-);
+export default class Card extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <div className="card">{this.props.children}</div>;
+  }
+}
